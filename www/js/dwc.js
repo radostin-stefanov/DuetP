@@ -5580,6 +5580,13 @@
 				$(".span-refresh-scans").addClass("hidden");
 			}
 
+			if (name == "pressure") {
+				currentPage = "pressure";
+				if (windowIsMdLg()) {
+					$("#page_pressure input").focus();
+				}
+			}
+			
 			if (name == "console") {
 				currentPage = "console";
 				if (windowIsMdLg()) {

@@ -116,13 +116,14 @@
 										<li role="presentation" class="navitem navitem-control active"><a class="navlink" href="#" data-target="control"><span class="glyphicon glyphicon-home"></span> Control</a></li>
 										<li role="presentation" class="navitem navitem-print"><a class="navlink" href="#" data-target="print"><span class="glyphicon glyphicon-print"></span> Print Job</a></li>
 										<li role="presentation" class="navitem navitem-scanner scan-control hidden"><a class="navlink" href="#" data-target="scanner"><span class="glyphicon glyphicon-facetime-video"></span> 3D Scanner <span class="glyphicon glyphicon-refresh span-refresh-scans hidden"></span></a></li>
+										
+										<li role="presentation" class="navitem navitem-pressure"><a class="navlink" href="#" data-target="pressure"><span class="glyphicon glyphicon-pressure"></span> Pressure Status</a></li>
 										<li role="presentation" class="navitem navitem-console"><a class="navlink" href="#" data-target="console"><span class="glyphicon glyphicon-console"></span> Console</a></li>
 										<li role="presentation" class="navitem navitem-files"><a class="navlink" href="#" data-target="files"><span class="glyphicon glyphicon-hdd"></span> Files <span class="glyphicon glyphicon-refresh span-refresh-files hidden"></span></a></li>
 										<li role="presentation" class="navitem navitem-macros"><a class="navlink" href="#" data-target="macros"><span class="glyphicon glyphicon-link"></span> Macros <span class="glyphicon glyphicon-refresh span-refresh-macros hidden"></span></a></li>
 										<li role="presentation" class="navitem navitem-filaments"><a class="navlink" href="#" data-target="filaments"><span class="glyphicon glyphicon-cd"></span> Filaments <span class="glyphicon glyphicon-refresh span-refresh-filaments hidden"></span></a></li>
 										<li role="presentation" class="navitem navitem-settings"><a class="navlink" href="#" data-target="settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
 										<!--<li role="presentation" class="navitem navitem-help"><a class="navlink" href="#" data-target="help"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>-->
-										<li role="presentation" class="navitem navitem-signal"><a class="navlink" href="#" data-target="signal"><span class="glyphicon glyphicon-signal"></span> Pressure Status</a></li>
 									</ul>
 								</td>
 							</tr>
@@ -745,7 +746,7 @@
 					<ul class="nav nav-sidebar">
 						<li class="navitem navitem-control active"><a class="navlink" href="#" data-target="control"><span class="glyphicon glyphicon-home"></span> Machine Control</a></li>
 						<li class="navitem navitem-print"><a class="navlink" href="#" data-target="print"><span class="glyphicon glyphicon-print"></span> Print Status</a></li>
-						<li class="navitem navitem-signal"><a class="navlink" href="#" data-target="print"><span class="glyphicon glyphicon-signal"></span> Pressure Status</a></li>
+						<li class="navitem navitem-pressure"><a class="navlink" href="#" data-target="pressure"><span class="glyphicon glyphicon-pressure"></span> Pressure Status</a></li>
 					</ul>
 					<ul class="nav nav-sidebar scan-control hidden">
 						<li class="navitem navitem-scanner"><a class="navlink" href="#" data-target="scanner"><span class="glyphicon glyphicon-facetime-video"></span> 3D Scanner <span class="glyphicon glyphicon-refresh span-refresh-scans hidden"></span></a></li>
@@ -1803,6 +1804,45 @@
 						</div>
 					</div>
 
+					<!-- Pressure Status -->
+					<div id="page_pressure" class="page">
+						<div class="row">
+							<form class="gcode-input">
+								<div class="col-xs-7 col-sm-7 col-md-8 col-lg-9">
+									<div class="input-group">
+										<input type="text" name="gcode" class="form-control" placeholder="Send G-Code..." disabled>
+										<div class="input-group-btn div-gcodes">
+											<button type="button" class="btn btn-default dropdown-toggle btn-gcodes disabled" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-right ul-gcodes">
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-1">
+									<div class="btn-group btn-group-justified">
+										<div class="btn-group">
+											<button type="submit" class="btn btn-primary disabled" title="Send G-Code from input"><span class="glyphicon glyphicon-send"></span> Start Pressure</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+									<div class="btn-group btn-group-justified">
+										<div class="btn-group">
+											<button class="btn btn-default" id="btn_clear_log" title="Clear G-Code Console"><span class="glyphicon glyphicon-trash"></span> Stop pressure</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="container-fluid" id="console_log">
+								</div>
+							</div>
+						</div>
+					</div>					
+					
 					<!-- G-Code Console -->
 					<div id="page_console" class="page">
 						<div class="row">
