@@ -4700,6 +4700,22 @@
 		e.preventDefault();
 	});
 
+
+
+	/*
+		$("#pressure_status").click(function(e) {
+			var moveString = "M120\nG91\nG1";
+			if ($(this).data("p") != undefined) {
+				moveString += " X" + $(this).data("x");
+			}
+			sendGCode(moveString);
+		}
+		e.preventDefault();
+		});
+*/
+
+
+
 	$("#btn_pause").click(function() {
 		if (isPaused) {
 			sendGCode("M24");	// Resume
@@ -5586,7 +5602,7 @@
 					$("#page_pressure input").focus();
 				}
 			}
-			
+
 			if (name == "console") {
 				currentPage = "console";
 				if (windowIsMdLg()) {

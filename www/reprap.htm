@@ -1065,7 +1065,7 @@
 										</div>
 
 										<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 no-horizontal-padding" id="div_feed">
-											<label>Test amount 42 mm:</label>
+											<label>Feed amount in mm:</label>
 											<div class="btn-group btn-group-justified" data-toggle="buttons">
 												<label class="btn btn-default disabled">
 													<input type="radio" name="feed" value="100"> 100
@@ -1532,6 +1532,7 @@
 
 					<div id="page_pressure" class="page">
 						<div class="row">
+							<!--
 							<form class="gcode-input">
 								<div class="col-xs-7 col-sm-7 col-md-8 col-lg-9">
 									<div class="input-group">
@@ -1559,22 +1560,18 @@
 								</div>
 							</form>
 						</div>
-
+					-->
 						<div class="row">
-							<div class="col-md-12">
-								<div class="container-fluid" id="console_log">
-								</div>
-							</div>
 							<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
 								<div class="panel panel-default" id="pressure_status">
 									<div class="panel-heading">
 										<span>Modify Pressure</span>
 											<td>
 												<div class="btn-group btn-group-justified" role="group">
-													<a href="#" role="button" data-x="-1" class="btn btn-default visible-lg disabled"><span class="glyphicon glyphicon-chevron-left"></span> P-1</a>
-													<a href="#" role="button" data-x="1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> P+1</a>
-													<a href="#" role="button" data-x="-1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> ?</a>
-													<a href="#" role="button" data-x="1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> ??</a>
+													<a href="#" role="button" data-p="-1" class="btn btn-default visible-lg disabled"><span class="glyphicon glyphicon-chevron-left"></span> P-1</a>
+													<a href="#" role="button" data-p="1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> P+1</a>
+													<a href="#" role="button" data-p="-1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> Start</a>
+													<a href="#" role="button" data-p="1" class="btn btn-default disabled"><span class="glyphicon glyphicon-chevron-left"></span> Stop</a>
 												</div>
 											</td>
 										</div>
@@ -1590,6 +1587,10 @@
 									</div>
 								</div>
 							</div>
+								<div class="col-md-12">
+									<div class="container-fluid" id="console_log">
+									</div>
+								</div>
 						</div>
 
 
