@@ -4704,7 +4704,7 @@
 
 	/*
 		$("#pressure_status").click(function(e) {
-			var moveString = "M120\nG91\nG1";
+			var ChangePressure = "M120\nG91\nG1";
 			if ($(this).data("p") != undefined) {
 				moveString += " X" + $(this).data("x");
 			}
