@@ -138,7 +138,7 @@
 			<!-- Info Panels -->
 			<div class="row" id="row_info">
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-4" id="div_tools_heaters">
-					<!-- Tools -->
+					<!-- Tools
 					<div id="div_tools" class="panel panel-info panel-status">
 						<div class="panel-heading">
 							<strong><span class="glyphicon glyphicon-wrench"></span> Tools</strong>
@@ -299,6 +299,119 @@
 							</tbody>
 						</table>
 					</div>
+				-->
+
+				<div id="div_tools" class="panel panel-info panel-status">
+					<div class="panel-heading">
+						<strong><span class="glyphicon glyphicon-wrench"></span> Tools</strong><table class="table table-bordered table-condensed table-centered-cells" id="table_tools">
+							<thead>
+								<tr>
+									<th>Tool</th>
+									<th>Current</th>
+									<th>Target</th>
+									<th>on</th>
+									<th>off</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr data-tool="0" data-heater="1">
+									<th>
+										<a href="#"><span>heat</span></a>
+										<span class="text-muted"></span>
+									</th>
+									<td class="current">n/a</td>
+									<td class="input-td">
+										<div class="input-group input-group-sm">
+											<input type="number" class="form-control" value="0" data-type="active" disabled>
+											<div class="input-group-btn div-head-temp hidden-sm">
+												<button type="button" class="btn btn-default dropdown-toggle btn-active-temp disabled" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+												<ul class="dropdown-menu dropdown-menu-right ul-active-temp" role="menu">
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+								</tr>
+
+								<tr data-tool="1" data-heater="2">
+									<th>
+										<a href="#"><span>Pressure</span></a>
+										<span class="text-muted"></span>
+									</th>
+									<td class="current">n/a</td>
+									<td class="input-td">
+										<div class="input-group input-group-sm">
+											<input type="number" class="form-control" value="0" data-type="active" disabled>
+											<div class="input-group-btn div-head-temp hidden-sm">
+												<button type="button" class="btn btn-default dropdown-toggle btn-active-temp disabled" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+												<ul class="dropdown-menu dropdown-menu-right ul-active-temp" role="menu">
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+								</tr>
+
+								<tr data-heater="bed">
+									<th>
+										<a href="#">Bed</a>
+									</th>
+									<td class="current">n/a</td>
+									<td>
+										<div class="input-group input-group-sm">
+											<input type="number" class="form-control" value="0" disabled>
+											<div class="input-group-btn div-head-temp hidden-sm">
+												<button type="button" class="btn btn-default dropdown-toggle btn-bed-temp disabled" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+												<ul class="dropdown-menu dropdown-menu-right ul-bed-temp" role="menu">
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+									<td class="input-td">
+										<button type="button"</button>
+									</td>
+								</tr>
+
+								<tr data-heater="chamber" class="hidden">
+									<th>
+										<a href="#">Chamber</a>
+									</th>
+									<th>
+										<a href="#" class="chamber">n/a</a>
+										<span class="text-muted heater-state"></span>
+									</th>
+									<td class="current">n/a</td>
+									<td>
+										<div class="input-group input-group-sm">
+											<input type="number" class="form-control" value="0" disabled>
+											<div class="input-group-btn div-head-temp hidden-sm">
+												<button type="button" class="btn btn-default dropdown-toggle btn-bed-temp disabled" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+												<ul class="dropdown-menu dropdown-menu-right ul-bed-temp" role="menu">
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+
 
 					<!-- Heater Temperatures -->
 					<div id="div_heaters" class="panel panel-info panel-status hidden">
