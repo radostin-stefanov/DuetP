@@ -5596,10 +5596,10 @@
 				$(".span-refresh-scans").addClass("hidden");
 			}
 
-			if (name == "pressure") {
-				currentPage = "pressure";
+			if (name == "camera") {
+				currentPage = "camera";
 				if (windowIsMdLg()) {
-					$("#page_pressure input").focus();
+					$("#page_camera input").focus();
 				}
 			}
 
