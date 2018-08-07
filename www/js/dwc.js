@@ -4930,6 +4930,13 @@
 		$(this).removeClass("btn-default").addClass("btn-primary");
 	});
 
+	//42 on off heater / pressure
+	$("#table_tools label.btn").click(function() {
+		$(this).parent().find("label.btn").removeClass("btn-primary").addClass("btn-default");
+		$(this).removeClass("btn-default").addClass("btn-primary");
+		});
+
+
 	$("#table_heaters > tbody > tr > th > a," +
 		"#table_tools > tbody > tr[data-heater='bed'] > th:first-child > a," +
 		"#table_tools > tbody > tr[data-heater='chamber'] > th:first-child > a").click(cbHeaterClick);
